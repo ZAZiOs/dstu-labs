@@ -1,18 +1,30 @@
 #include <iostream>
 #include <cmath>
+#include <limits>
 
 using namespace std;
+
+double inputNum(string Name) {
+    double num;
+    while (true) {
+        cout << "Введите " << Name << ": ";
+        cin >> num;
+        if (cin.fail() || num == 0) {
+            cout << "Ошибка ввода. Введено не число.\n";
+            cin.clear();
+            cin.ignore(numeric_limits <streamsize>::max(), '\n');
+        } else {
+            break;
+        }
+    };
+    return num;
+}
+
 
 int main() {
     double x, y;
 
-    cout << "Введите X: ";
-    cin >> x;
-
-    if (cin.fail()) {
-        cout << "Ошибка ввода. Введено не число.\n";
-        return 1;
-    }
+    x = inputNum("X");
 
     if (x < -2) {
         cout << "Выполняется условие x < -2\n";
@@ -25,7 +37,7 @@ int main() {
         y = cos(pow(x, 2) + 5 * x) / (5 * pow(x, 2) - 2); // cos(x^2+5x) | 5x^2 - 2
     }
 
-    cout << "Результат вычислений: y = " << y;
+    cout << "Результат вычислений: y = " << y << endl;
     
     return 0;
 }
