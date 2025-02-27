@@ -33,8 +33,9 @@ double sumAfterFirstZero(double *arr, int size) {
 }
 
 int main() {
+    srand(time(0));
     const int SIZE = 10;
-    const int zeroIndex = 7;
+    const int zeroIndex = rand() % 10;
     double A[SIZE];
 
     fillArray(A, SIZE, zeroIndex);
