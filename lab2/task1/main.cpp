@@ -16,6 +16,7 @@ void copyOddIndexes(int* src, int* dest, int size, int& newSize) {
     for (int* ptr = src; ptr < (src + size); ptr += 2) {
         *(dest + newSize) = *ptr;
         newSize++;
+        
         /* 
         В данном случае наш новый массив всегда будет
         меньше старого, так что проблем не будет
