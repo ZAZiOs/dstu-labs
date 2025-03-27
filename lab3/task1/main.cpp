@@ -25,7 +25,13 @@ void printArray(const vector<double>& arr) {
 
 // считаем нулики
 int countZeroElements(const vector<double>& arr) {
-    return count(arr.begin(), arr.end(), 0);
+    int zeros = 0;
+    for (int i = 1; i < arr.size(); i++) {
+        if (arr[i] == 0) {
+            zeros++;
+        }
+    }
+    return zeros;
 }
 
 // найти мин элемент и посчитать
