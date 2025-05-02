@@ -96,6 +96,7 @@ int main() {
     }
 
     
+
     double minVal = -10.0, maxVal = 10.0;
     randomizeMatrix(A, M, N, minVal, maxVal);
     randomizeMatrix(B, M, N, minVal, maxVal);
