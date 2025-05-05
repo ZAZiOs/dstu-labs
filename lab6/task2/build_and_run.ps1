@@ -9,7 +9,7 @@ if (-not (Test-Path -Path $outputDir)) {
 
 
 $compiler = "g++"
-$cppFiles = ".\main.cpp", ".\funcs.cpp"
+$cppFiles = ".\main.cpp", ".\task.cpp"
 $outputFile = ".\output\main.exe"
 $options = "-Wall", "-Wextra", "-g3", "-I.", "-fexec-charset=UTF-8"
 
